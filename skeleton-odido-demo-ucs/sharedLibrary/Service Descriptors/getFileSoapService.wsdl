@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="GetFileServiceAbstractWSDL" targetNamespace="http://www.tibco.com/GetFileServiceAbstractWSDL/" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:bwh="http://www.tibco.com/5801f7e4954e4ef0a16c9ca4f657225a/SOAPServiceBinding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/GetFileServiceAbstractWSDL/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/GetFileServiceAbstractWSDL/" xmlns="http://www.tibco.com/GetFileServiceAbstractWSDL/" xmlns:tns="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><xsd:element name="GetFileRequest"><xsd:complexType><xsd:sequence><xsd:element name="fileName" type="xsd:string"/></xsd:sequence></xsd:complexType></xsd:element><xsd:element name="GetFileResponse"><xsd:complexType><xsd:sequence><xsd:element name="fileMetadata" type="xsd:string"/><xsd:element name="fileContent" type="xsd:base64Binary"/></xsd:sequence></xsd:complexType></xsd:element><xsd:element name="GetFileServiceRequest"><xsd:complexType><xsd:sequence><xsd:element name="in" type="xsd:string"/></xsd:sequence></xsd:complexType></xsd:element><xsd:element name="GetFileServiceResponse"><xsd:complexType><xsd:sequence><xsd:element name="out" type="xsd:string"/></xsd:sequence></xsd:complexType></xsd:element><xsd:element name="GetFileServiceFault"><xsd:complexType><xsd:sequence><xsd:element name="fault" type="xsd:string"/></xsd:sequence></xsd:complexType></xsd:element></xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFileServiceFault">
+    <wsdl:part name="parameters" element="tns:GetFileServiceFault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetFileServiceResponse">
+    <wsdl:part name="parameters" element="tns:GetFileServiceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetFileRequest">
+    <wsdl:part name="parameters" element="tns:GetFileRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetFileResponse">
+    <wsdl:part name="parameters" element="tns:GetFileResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetFileServiceRequest">
+    <wsdl:part name="parameters" element="tns:GetFileServiceRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetFileServiceAbstractWSDL">
+    <wsdl:operation name="GetFile">
+      <wsdl:input message="tns:GetFileRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:GetFileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:GetFileServiceAbstractWSDL">
+    <soap11:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetFile">
+      <soap11:operation soapAction="GetFile" style="document" wsdl:required="true"/>
+      <wsdl:input>
+        <soap11:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap11:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetFileServiceAbstractWSDL">
+    <wsdl:port name="GetFileServiceAbstractWSDLPort" binding="tns:SOAPServiceBinding">
+      <soap11:address location="http://mpandav-MacBook-m1.local:18080/SOAPServiceBinding/getFileServiceAbstractWSDL/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
