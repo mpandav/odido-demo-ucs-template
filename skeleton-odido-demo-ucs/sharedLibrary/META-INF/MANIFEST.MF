@@ -31,7 +31,6 @@ Provide-Capability: com.tibco.bw.module; name="sharedLibrary"; version:Version="
  com.tibco.bw.schemas; ns="http://www.example.com/namespaces/tns/1699990752353",
  com.tibco.bw.schemas; ns="http://ns.tibco.com/bw/palette/dataformat/0db58d87-d48b-43d4-b25c-6f88af271c26",
  com.tibco.bw.schemas; ns="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1562569084274",
- com.tibco.bw.wsdls; ns="http://www.example.com/interface/attachments",
  com.tibco.bw.processes; name="aws.s3",
  com.tibco.bw.processes; name="sftp",
  com.tibco.bw.resources; name="aws",

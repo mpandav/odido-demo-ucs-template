@@ -213,7 +213,6 @@
             <plnk:partnerLinkType name="partnerLinkType">
                 <plnk:role name="use" portType="ptyp:GetFileAttachmentPortType"/>
             </plnk:partnerLinkType>
-            <wsdl:import namespace="http://www.example.com/interface/attachments"/>
         </wsdl:definitions>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="mpandav"
@@ -496,7 +495,6 @@
         <tibex:namespaceItem
             namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns1"/>
     </tibex:NamespaceRegistry>
-    <bpws:import importType="http://schemas.xmlsoap.org/wsdl/" namespace="http://www.example.com/interface/attachments"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
