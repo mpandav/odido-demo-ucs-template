@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: odido-bwce-template-demo-ucs
-  title: Odido - BWCE - Demo Usecases
+  name: odido-bwce-template-demo-ucs-v1
+  title: Odido - BWCE - Demo Usecases V1
   description: Create a new Odido - BWCE project to see Demo Uscase implementation
   tags:
   - tibco
